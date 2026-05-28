@@ -43,3 +43,22 @@ docker run --rm -p 3000:80 ghcr.io/aey001/klokke:latest
 ```
 
 Åpne deretter `http://localhost:3000` i nettleseren.
+
+## GitHub Pages
+
+Denne appen kan også publiseres som en statisk side med GitHub Pages.
+Workflow-filen `.github/workflows/deploy-pages.yml` bygger `dist/` og distribuerer det når du pusher til `main`.
+
+Nettsiden vil være tilgjengelig her etter første vellykkede deploy:
+
+```
+https://aey001.github.io/klokke/
+```
+
+For å bygge og publisere manuelt fra GitHub Actions:
+
+```bash
+git add .github/workflows/deploy-pages.yml README.md
+git commit -m "ci: deploy to GitHub Pages"
+git push origin main
+```
