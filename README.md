@@ -26,3 +26,20 @@ Med Docker Desktop installert:
 - `src/App.jsx` - React-komponenten for klokke og animasjon.
 - `Dockerfile` - Bygger appen og serverer den med Nginx.
 - `docker-compose.yml` - Enkel Docker Compose-oppsett.
+
+## Publisert image på GHCR
+
+Imaget er bygget og publisert til GitHub Container Registry.
+
+```
+ghcr.io/aey001/klokke:latest
+```
+
+For å hente og kjøre det publiserte imaget:
+
+```bash
+docker pull ghcr.io/aey001/klokke:latest
+docker run --rm -p 3000:80 ghcr.io/aey001/klokke:latest
+```
+
+Åpne deretter `http://localhost:3000` i nettleseren.
