@@ -33,6 +33,8 @@ Thumbs.db
 *.tmp
 *.temp
 *.swp
+*.tar
+*.tar.gz
 
 # Coverage
 coverage/
